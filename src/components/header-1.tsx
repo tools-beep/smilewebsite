@@ -355,9 +355,14 @@ export function SiteHeader() {
           <motion.div initial={{ width: 0 }} animate={{ width: scrollY >= 120 ? "auto" : 0 }} transition={{ ease: "linear", duration: 0.25, delay: 0.05 }} className="!hidden overflow-hidden rounded-full md:!block">
             <AnimatePresence>
               {scrollY >= 120 && (
-                <motion.ul initial={{ x: "125%" }} animate={{ x: "0" }} exit={{ x: "125%", transition: { ease: "linear", duration: 1 } }} transition={{ ease: "linear", duration: 0.3 }} className="shrink-0 whitespace-nowrap">
+                <motion.ul initial={{ x: "125%" }} animate={{ x: "0" }} exit={{ x: "125%", transition: { ease: "linear", duration: 1 } }} transition={{ ease: "linear", duration: 0.3 }} className="shrink-0 whitespace-nowrap flex gap-2">
                   <li>
-                    <a href="#" className="bg-primary text-primary-foreground relative inline-flex w-fit items-center justify-center gap-x-1.5 overflow-hidden rounded-full px-3 py-1.5 outline-none">
+                    <Link to="/careers" className="bg-secondary text-secondary-foreground relative inline-flex w-fit items-center justify-center gap-x-1.5 overflow-hidden rounded-full px-3 py-1.5 outline-none hover:bg-secondary/90 transition-colors">
+                      Apply
+                    </Link>
+                  </li>
+                  <li>
+                    <a href="#contact" className="bg-primary text-primary-foreground relative inline-flex w-fit items-center justify-center gap-x-1.5 overflow-hidden rounded-full px-3 py-1.5 outline-none">
                       Get Started
                     </a>
                   </li>
@@ -366,8 +371,17 @@ export function SiteHeader() {
             </AnimatePresence>
           </motion.div>
         </motion.div>
-        <motion.div className="z-[999] hidden items-center gap-x-5 md:flex" animate={{ y: scrollY >= 120 ? -50 : 0, opacity: scrollY >= 120 ? 0 : 1 }} transition={{ duration: 0.15 }}>
-          <button>Get Started</button>
+        <motion.div className="z-[999] hidden items-center gap-x-3 md:flex" animate={{ y: scrollY >= 120 ? -50 : 0, opacity: scrollY >= 120 ? 0 : 1 }} transition={{ duration: 0.15 }}>
+          <Link to="/careers">
+            <button className="bg-secondary text-secondary-foreground px-4 py-2 rounded-full hover:bg-secondary/90 transition-colors">
+              Apply
+            </button>
+          </Link>
+          <a href="#contact">
+            <button className="bg-primary text-primary-foreground px-4 py-2 rounded-full hover:bg-primary/90 transition-colors">
+              Get Started
+            </button>
+          </a>
         </motion.div>
       </nav>
     </header>
