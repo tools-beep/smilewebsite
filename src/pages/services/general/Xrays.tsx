@@ -8,6 +8,7 @@ const Xrays = () => {
       subtitle="General & Family Dentistry"
       description="Advanced digital X-ray technology provides essential diagnostic information while using up to 90% less radiation than traditional X-rays. These images help us detect hidden problems, plan treatments accurately, and monitor your oral health over time."
       icon={<Heart className="w-6 h-6 text-primary" />}
+      heroImage="https://images.unsplash.com/photo-1629909615957-be38b5894a9f?w=800&auto=format&fit=crop"
       benefits={[
         "Early detection of hidden problems",
         "Up to 90% less radiation than traditional X-rays",

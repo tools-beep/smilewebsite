@@ -8,6 +8,7 @@ const RootCanal = () => {
       subtitle="Surgical & Emergency Dentistry"
       description="Save your natural tooth and relieve pain with modern root canal therapy. Despite its reputation, root canal treatment is a comfortable, routine procedure that eliminates infection, preserves your tooth, and provides lasting relief—no more painful than getting a filling."
       icon={<Zap className="w-6 h-6 text-primary" />}
+      heroImage="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&auto=format&fit=crop"
       benefits={[
         "Save your natural tooth",
         "Eliminate pain and infection",

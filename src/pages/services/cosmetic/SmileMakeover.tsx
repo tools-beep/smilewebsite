@@ -8,6 +8,7 @@ const SmileMakeover = () => {
       subtitle="Book Your Smile Makeover Consultation"
       description="Transform your entire smile with a comprehensive smile makeover. This personalized treatment combines multiple cosmetic and restorative procedures to address all aspects of your smile—from color and alignment to shape and proportion. Our artistic approach and advanced dental techniques create stunning, harmonious results tailored to your unique facial features, personality, and aesthetic goals."
       icon={<Sparkles className="w-6 h-6 text-primary" />}
+      heroImage="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&auto=format&fit=crop"
       benefits={[
         "Complete smile transformation tailored to you",
         "Addresses multiple concerns simultaneously",

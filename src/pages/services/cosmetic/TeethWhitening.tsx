@@ -8,6 +8,7 @@ const TeethWhitening = () => {
       subtitle="Book Your Whitening Appointment Now"
       description="Achieve visibly brighter teeth in just one visit. Teeth whitening is a cosmetic dental treatment designed to remove stains and discoloration, significantly brightening your teeth and enhancing your smile's overall appearance. Using advanced, professional-grade solutions, we safely and effectively whiten your teeth, delivering noticeable results quickly and comfortably. Unlike over-the-counter kits, our in-office whitening system ensures deeper stain removal and longer-lasting results."
       icon={<Sparkles className="w-6 h-6 text-primary" />}
+      heroImage="https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=800&auto=format&fit=crop"
       benefits={[
         "Immediate, noticeable improvement",
         "Safe and supervised by dental professionals",

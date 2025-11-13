@@ -8,6 +8,7 @@ const CleaningExams = () => {
       subtitle="General & Family Dentistry"
       description="Regular dental cleanings and comprehensive exams are the foundation of excellent oral health. Our thorough preventive care helps detect issues early, removes harmful plaque and tartar, and keeps your smile healthy and bright."
       icon={<Heart className="w-6 h-6 text-primary" />}
+      heroImage="https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&auto=format&fit=crop"
       benefits={[
         "Prevention of cavities and gum disease",
         "Early detection of dental problems",

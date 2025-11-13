@@ -8,6 +8,7 @@ const Veneers = () => {
       subtitle="Book Your Veneers Consultation"
       description="Transform your smile with custom-made porcelain veneers. These ultra-thin, tooth-colored shells are expertly crafted and permanently bonded to the front surface of your teeth to create a stunning, natural-looking smile. Veneers are an ideal solution for correcting chips, cracks, gaps, severe discoloration, misshapen teeth, or minor misalignment—giving you the confidence to smile freely."
       icon={<Sparkles className="w-6 h-6 text-primary" />}
+      heroImage="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&auto=format&fit=crop"
       benefits={[
         "Instant smile transformation in just two visits",
         "Natural-looking, beautiful results",

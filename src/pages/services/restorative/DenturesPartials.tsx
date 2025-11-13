@@ -8,6 +8,7 @@ const DenturesPartials = () => {
       subtitle="Restorative & Reconstructive Dentistry"
       description="Replace multiple missing teeth with custom dentures and partial dentures. Modern dental prosthetics provide natural-looking, comfortable solutions that restore your ability to eat, speak, and smile confidently—dramatically improving your quality of life."
       icon={<Shield className="w-6 h-6 text-primary" />}
+      heroImage="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&auto=format&fit=crop"
       benefits={[
         "Restore ability to eat and speak properly",
         "Natural-looking smile restoration",

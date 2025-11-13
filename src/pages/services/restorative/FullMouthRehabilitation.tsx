@@ -8,6 +8,7 @@ const FullMouthRehabilitation = () => {
       subtitle="Restorative & Reconstructive Dentistry"
       description="Comprehensive restoration of your entire mouth to achieve optimal oral health, function, and aesthetics. This transformative treatment combines multiple procedures to address severe dental damage, extensive tooth loss, bite problems, and TMJ disorders—giving you a completely renewed smile."
       icon={<Shield className="w-6 h-6 text-primary" />}
+      heroImage="https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=800&auto=format&fit=crop"
       benefits={[
         "Complete restoration of oral health",
         "Improved bite function and alignment",
