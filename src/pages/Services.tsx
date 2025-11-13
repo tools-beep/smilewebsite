@@ -10,13 +10,38 @@ const Services = () => {
       icon: Sparkles,
       title: "Cosmetic Dentistry",
       description: "Personalized treatments designed for stunning, confident smiles.",
+      image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&auto=format&fit=crop",
       services: [
-        { name: "Teeth Whitening", link: "/services/teeth-whitening" },
-        { name: "Invisalign", link: "/services/invisalign" },
-        { name: "Veneers", link: "/services/veneers" },
-        { name: "Smile Makeover", link: "/services/smile-makeover" },
-        { name: "Bonding", link: "/services/bonding" },
-        { name: "Cosmetic Consultations", link: "/services/cosmetic-consultations" },
+        { 
+          name: "Teeth Whitening", 
+          link: "/services/teeth-whitening",
+          image: "https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=400&auto=format&fit=crop"
+        },
+        { 
+          name: "Invisalign", 
+          link: "/services/invisalign",
+          image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=400&auto=format&fit=crop"
+        },
+        { 
+          name: "Veneers", 
+          link: "/services/veneers",
+          image: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=400&auto=format&fit=crop"
+        },
+        { 
+          name: "Smile Makeover", 
+          link: "/services/smile-makeover",
+          image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&auto=format&fit=crop"
+        },
+        { 
+          name: "Bonding", 
+          link: "/services/bonding",
+          image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&auto=format&fit=crop"
+        },
+        { 
+          name: "Cosmetic Consultations", 
+          link: "/services/cosmetic-consultations",
+          image: "https://images.unsplash.com/photo-1629909615957-be38b5894a9f?w=400&auto=format&fit=crop"
+        },
       ],
       link: "/services/cosmetic-dentistry",
       gradient: "bg-gradient-primary",
@@ -25,12 +50,33 @@ const Services = () => {
       icon: Heart,
       title: "General & Family Dentistry",
       description: "Focused on prevention, comfort, and long-term oral health.",
+      image: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&auto=format&fit=crop",
       services: [
-        { name: "Pediatric Dentistry", link: "/services/pediatric-dentistry" },
-        { name: "Cleaning and Exams", link: "/services/cleaning-exams" },
-        { name: "Sealants and Fluoride", link: "/services/sealants-fluoride" },
-        { name: "X-rays", link: "/services/xrays" },
-        { name: "Night Guard", link: "/services/night-guard" },
+        { 
+          name: "Pediatric Dentistry", 
+          link: "/services/pediatric-dentistry",
+          image: "https://images.unsplash.com/photo-1626719624783-28c339f1f75a?w=400&auto=format&fit=crop"
+        },
+        { 
+          name: "Cleaning and Exams", 
+          link: "/services/cleaning-exams",
+          image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400&auto=format&fit=crop"
+        },
+        { 
+          name: "Sealants and Fluoride", 
+          link: "/services/sealants-fluoride",
+          image: "https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=400&auto=format&fit=crop"
+        },
+        { 
+          name: "X-rays", 
+          link: "/services/xrays",
+          image: "https://images.unsplash.com/photo-1629909615957-be38b5894a9f?w=400&auto=format&fit=crop"
+        },
+        { 
+          name: "Night Guard", 
+          link: "/services/night-guard",
+          image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=400&auto=format&fit=crop"
+        },
       ],
       link: "/services/general-family",
       gradient: "bg-gradient-primary",
@@ -39,12 +85,33 @@ const Services = () => {
       icon: Shield,
       title: "Restorative & Reconstructive Dentistry",
       description: "Comprehensive solutions for long-term dental health and aesthetics.",
+      image: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&auto=format&fit=crop",
       services: [
-        { name: "Crowns & Bridges", link: "/services/crowns-bridges" },
-        { name: "Dental Implants", link: "/services/implants" },
-        { name: "Full Mouth Rehabilitation", link: "/services/full-mouth-rehabilitation" },
-        { name: "Dentures & Partials", link: "/services/dentures-partials" },
-        { name: "Tooth-Colored Fillings", link: "/services/tooth-colored-fillings" },
+        { 
+          name: "Crowns & Bridges", 
+          link: "/services/crowns-bridges",
+          image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400&auto=format&fit=crop"
+        },
+        { 
+          name: "Dental Implants", 
+          link: "/services/implants",
+          image: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=400&auto=format&fit=crop"
+        },
+        { 
+          name: "Full Mouth Rehabilitation", 
+          link: "/services/full-mouth-rehabilitation",
+          image: "https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=400&auto=format&fit=crop"
+        },
+        { 
+          name: "Dentures & Partials", 
+          link: "/services/dentures-partials",
+          image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&auto=format&fit=crop"
+        },
+        { 
+          name: "Tooth-Colored Fillings", 
+          link: "/services/tooth-colored-fillings",
+          image: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=400&auto=format&fit=crop"
+        },
       ],
       link: "/services/restorative-reconstructive",
       gradient: "bg-gradient-innovation",
@@ -53,13 +120,38 @@ const Services = () => {
       icon: Zap,
       title: "Surgical & Emergency Dentistry",
       description: "Providing quick relief and comprehensive surgical solutions.",
+      image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&auto=format&fit=crop",
       services: [
-        { name: "Emergency Dentistry", link: "/services/emergency-dentistry" },
-        { name: "Root Canal Treatment", link: "/services/root-canal" },
-        { name: "Oral Surgery", link: "/services/oral-surgery" },
-        { name: "Tooth Extraction", link: "/services/tooth-extraction" },
-        { name: "Sleep Dentistry", link: "/services/sleep-dentistry" },
-        { name: "Laser Dentistry", link: "/services/laser-dentistry" },
+        { 
+          name: "Emergency Dentistry", 
+          link: "/services/emergency-dentistry",
+          image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&auto=format&fit=crop"
+        },
+        { 
+          name: "Root Canal Treatment", 
+          link: "/services/root-canal",
+          image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400&auto=format&fit=crop"
+        },
+        { 
+          name: "Oral Surgery", 
+          link: "/services/oral-surgery",
+          image: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=400&auto=format&fit=crop"
+        },
+        { 
+          name: "Tooth Extraction", 
+          link: "/services/tooth-extraction",
+          image: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=400&auto=format&fit=crop"
+        },
+        { 
+          name: "Sleep Dentistry", 
+          link: "/services/sleep-dentistry",
+          image: "https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=400&auto=format&fit=crop"
+        },
+        { 
+          name: "Laser Dentistry", 
+          link: "/services/laser-dentistry",
+          image: "https://images.unsplash.com/photo-1629909615957-be38b5894a9f?w=400&auto=format&fit=crop"
+        },
       ],
       link: "/services/surgical-emergency",
       gradient: "bg-gradient-innovation",
@@ -104,37 +196,55 @@ const Services = () => {
                 return (
                   <Card 
                     key={index}
-                    className="glass-card border-0 hover:shadow-2xl transition-all duration-300 animate-slide-in-up"
+                    className="glass-card border-0 hover:shadow-2xl transition-all duration-300 animate-slide-in-up overflow-hidden group"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
+                    {/* Category Image Header */}
+                    <Link to={category.link} className="block relative h-48 overflow-hidden">
+                      <img 
+                        src={category.image} 
+                        alt={category.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                      <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                        <div className={`w-14 h-14 ${category.gradient} rounded-xl flex items-center justify-center glow-primary`}>
+                          <IconComponent className="w-7 h-7 text-white" />
+                        </div>
+                        <ArrowRight className="w-6 h-6 text-white group-hover:translate-x-1 transition-all duration-300" />
+                      </div>
+                    </Link>
+
                     <CardContent className="p-8">
                       {/* Category Header */}
-                      <Link to={category.link} className="group block mb-6">
-                        <div className="flex items-start justify-between mb-4">
-                          <div className={`w-16 h-16 ${category.gradient} rounded-2xl flex items-center justify-center glow-primary group-hover:glow-innovation transition-all duration-300 group-hover:scale-110`}>
-                            <IconComponent className="w-8 h-8 text-white" />
-                          </div>
-                          <ArrowRight className="w-6 h-6 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all duration-300" />
-                        </div>
-                        
-                        <h2 className="text-3xl font-display font-bold mb-3 group-hover:text-primary transition-colors">
+                      <Link to={category.link} className="group/title block mb-6">
+                        <h2 className="text-3xl font-display font-bold mb-3 group-hover/title:text-primary transition-colors">
                           {category.title}
                         </h2>
                         <p className="text-muted-foreground">{category.description}</p>
                       </Link>
 
-                      {/* Services List */}
-                      <div className="space-y-3 pt-4 border-t border-border/50">
+                      {/* Services Grid with Images */}
+                      <div className="grid grid-cols-2 gap-3 pt-4 border-t border-border/50">
                         {category.services.map((service, serviceIndex) => (
                           <Link
                             key={serviceIndex}
                             to={service.link}
-                            className="group/service flex items-center justify-between px-4 py-3 rounded-lg hover:bg-muted/50 transition-all duration-300"
+                            className="group/service relative overflow-hidden rounded-lg"
                           >
-                            <span className="text-foreground group-hover/service:text-primary transition-colors font-medium">
-                              {service.name}
-                            </span>
-                            <ArrowRight className="w-4 h-4 text-muted-foreground group-hover/service:text-primary group-hover/service:translate-x-1 transition-all duration-300" />
+                            <div className="relative h-24 overflow-hidden">
+                              <img 
+                                src={service.image} 
+                                alt={service.name}
+                                className="w-full h-full object-cover group-hover/service:scale-110 transition-transform duration-300"
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
+                              <div className="absolute inset-0 flex items-end p-2">
+                                <span className="text-white text-xs font-semibold line-clamp-2 leading-tight">
+                                  {service.name}
+                                </span>
+                              </div>
+                            </div>
                           </Link>
                         ))}
                       </div>
@@ -186,5 +296,3 @@ const Services = () => {
 };
 
 export default Services;
-
-

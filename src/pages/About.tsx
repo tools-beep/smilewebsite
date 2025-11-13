@@ -4,6 +4,8 @@ import { SiteHeader } from "@/components/header-1";
 import Footer from "@/components/Footer";
 import { CheckCircle2, ArrowRight, Users, Award, Heart, Star } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import drBoydImage from "@/assets/drboyd.jpeg";
+import drLindaImage from "@/assets/drlinda.JPG";
 
 const About = () => {
   const { ref: heroRef, isInView: heroInView } = useScrollAnimation();
@@ -143,7 +145,7 @@ const About = () => {
                 <div className="grid md:grid-cols-5 gap-0">
                   <div className="md:col-span-2 relative h-[400px] md:h-auto">
                     <img 
-                      src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&auto=format&fit=crop" 
+                      src={drBoydImage} 
                       alt="Dr. Boyd Patummas"
                       className="w-full h-full object-cover"
                     />
@@ -235,7 +237,7 @@ const About = () => {
 
                   <div className="md:col-span-2 relative h-[400px] md:h-auto order-1 md:order-2">
                     <img 
-                      src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=800&auto=format&fit=crop" 
+                      src={drLindaImage} 
                       alt="Dr. Linda Ma"
                       className="w-full h-full object-cover"
                     />
