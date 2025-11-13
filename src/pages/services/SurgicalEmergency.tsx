@@ -1,75 +1,176 @@
-import ServiceTemplate from "@/components/ServiceTemplate";
-import { Zap } from "lucide-react";
+import { SiteHeader } from "@/components/header-1";
+import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
+import { Zap, ArrowRight } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const SurgicalEmergency = () => {
+  const { ref: headerRef, isInView: headerInView } = useScrollAnimation();
+
+  const services = [
+    {
+      title: "Emergency Dentistry",
+      description: "Immediate care for urgent dental situations and pain relief",
+      link: "/services/emergency-dentistry",
+      image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&auto=format&fit=crop"
+    },
+    {
+      title: "Root Canal Treatment",
+      description: "Advanced endodontic therapy to save infected teeth",
+      link: "/services/root-canal",
+      image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&auto=format&fit=crop"
+    },
+    {
+      title: "Oral Surgery",
+      description: "Expert surgical procedures for complex dental issues",
+      link: "/services/oral-surgery",
+      image: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&auto=format&fit=crop"
+    },
+    {
+      title: "Tooth Extraction",
+      description: "Safe removal of damaged or problematic teeth",
+      link: "/services/tooth-extraction",
+      image: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&auto=format&fit=crop"
+    },
+    {
+      title: "Sleep Dentistry",
+      description: "Comfortable sedation options for anxiety-free procedures",
+      link: "/services/sleep-dentistry",
+      image: "https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=800&auto=format&fit=crop"
+    },
+    {
+      title: "Laser Dentistry",
+      description: "Precise, minimally invasive treatments with faster healing",
+      link: "/services/laser-dentistry",
+      image: "https://images.unsplash.com/photo-1629909615957-be38b5894a9f?w=800&auto=format&fit=crop"
+    }
+  ];
+
   return (
-    <ServiceTemplate
-      title="Surgical & Emergency Dentistry"
-      subtitle="Quick Relief & Advanced Solutions"
-      description="Providing quick relief and comprehensive surgical solutions when you need them most. Our experienced team is equipped to handle dental emergencies and perform advanced surgical procedures with precision and care."
-      icon={<Zap className="w-6 h-6 text-primary" />}
-      benefits={[
-        "24/7 emergency dental care",
-        "Immediate pain relief",
-        "Advanced surgical techniques",
-        "Sedation options available",
-        "Minimally invasive procedures",
-        "Fast, efficient treatment",
-        "Experienced surgical team",
-        "Same-day appointments for emergencies"
-      ]}
-      process={[
-        {
-          step: 1,
-          title: "Emergency Contact",
-          description: "Call us immediately when you have a dental emergency. Our team will provide guidance over the phone and schedule you for the earliest available appointment, often the same day."
-        },
-        {
-          step: 2,
-          title: "Rapid Assessment",
-          description: "Upon arrival, we quickly evaluate your condition, take necessary X-rays, and determine the best course of action to relieve your pain and address the underlying issue."
-        },
-        {
-          step: 3,
-          title: "Treatment & Relief",
-          description: "We provide immediate treatment to alleviate your pain and stabilize your condition. For surgical procedures, we ensure your comfort with appropriate anesthesia and sedation options."
-        },
-        {
-          step: 4,
-          title: "Recovery & Follow-up",
-          description: "We provide detailed post-treatment care instructions and schedule follow-up visits to monitor your healing and ensure optimal recovery."
-        }
-      ]}
-      faqs={[
-        {
-          question: "What qualifies as a dental emergency?",
-          answer: "Dental emergencies include severe toothaches, knocked-out or broken teeth, facial swelling, uncontrolled bleeding, abscesses, or trauma to the mouth. If you're unsure, call us—we'll help you determine if you need immediate care."
-        },
-        {
-          question: "How painful is a root canal?",
-          answer: "Modern root canal therapy is typically no more uncomfortable than getting a filling. We use local anesthesia and sedation options to ensure you're comfortable throughout the procedure."
-        },
-        {
-          question: "What should I do if my tooth gets knocked out?",
-          answer: "Handle the tooth by the crown (not the root), rinse it gently if dirty, try to place it back in the socket if possible, or keep it in milk. Call us immediately—timing is critical for successful re-implantation."
-        },
-        {
-          question: "Do you offer sedation for anxious patients?",
-          answer: "Yes, we offer various sedation options including nitrous oxide (laughing gas), oral sedation, and IV sedation to help anxious patients feel relaxed and comfortable during procedures."
-        }
-      ]}
-      relatedServices={[
-        { name: "Emergency Dentistry", link: "/services/emergency-dentistry" },
-        { name: "Root Canal Treatment", link: "/services/root-canal" },
-        { name: "Oral Surgery", link: "/services/oral-surgery" },
-        { name: "Tooth Extraction", link: "/services/tooth-extraction" },
-        { name: "Sleep Dentistry", link: "/services/sleep-dentistry" },
-        { name: "Laser Dentistry", link: "/services/laser-dentistry" }
-      ]}
-    />
+    <div className="min-h-screen bg-background">
+      <SiteHeader />
+      
+      {/* Hero Section */}
+      <section className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-br from-background via-muted/10 to-background">
+        <div className="absolute top-20 right-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float"></div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div
+            ref={headerRef}
+            className={`max-w-4xl mx-auto text-center ${headerInView ? 'animate-slide-in-up' : 'opacity-0'}`}
+          >
+            <div className="inline-flex items-center px-6 py-3 rounded-full glass-card mb-6 glow-primary">
+              <Zap className="w-5 h-5 text-primary mr-2" />
+              <span className="font-medium text-foreground">EMERGENCY CARE AVAILABLE</span>
+            </div>
+            <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 leading-tight">
+              <span className="text-gradient-animate">Surgical & Emergency</span> Dentistry
+            </h1>
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-8">
+              Providing quick relief and comprehensive surgical solutions.
+            </p>
+            <Button size="xl" className="group transform transition-all duration-300 hover:scale-105">
+              Call for Emergency
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Introduction Section */}
+      <section className="py-20 bg-muted/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-foreground">
+              At Smile Innovation,
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              we understand that dental emergencies can happen at any time. Our experienced team is equipped to handle urgent situations and perform advanced surgical procedures with precision, care, and a focus on your comfort.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-center mb-12 text-foreground">
+            Rapid Relief and Expert Surgical Care
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {services.map((service, index) => (
+              <Card 
+                key={index}
+                className="glass-card border-0 overflow-hidden hover:shadow-2xl transition-all duration-300 group animate-slide-in-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="relative h-64 overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-display font-bold mb-3 text-foreground group-hover:text-primary transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground mb-6">
+                    {service.description}
+                  </p>
+                  <Button variant="outline" asChild className="w-full group/btn">
+                    <Link to={service.link}>
+                      Learn More
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-center mb-16 text-foreground">
+            Why Choose Smile Innovation
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            {[
+              { number: "01", title: "Advanced technology and equipment" },
+              { number: "02", title: "Personalized patient care" },
+              { number: "03", title: "Expert dental team" },
+              { number: "04", title: "Commitment to comfort and convenience" }
+            ].map((item, index) => (
+              <div key={index} className="text-center">
+                <div className="text-6xl font-bold text-primary/20 mb-4">{item.number}</div>
+                <h3 className="text-xl font-semibold text-foreground">{item.title}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-br from-primary to-innovation text-primary-foreground text-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
+            Need Emergency Dental Care?
+          </h2>
+          <Button variant="secondary" size="xl" className="group transform transition-all duration-300 hover:scale-105">
+            CALL NOW: (480) 820-7777
+            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </Button>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
   );
 };
 
 export default SurgicalEmergency;
-
-

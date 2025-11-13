@@ -1,74 +1,170 @@
-import ServiceTemplate from "@/components/ServiceTemplate";
-import { Shield } from "lucide-react";
+import { SiteHeader } from "@/components/header-1";
+import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
+import { Shield, ArrowRight } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const RestorativeReconstructive = () => {
+  const { ref: headerRef, isInView: headerInView } = useScrollAnimation();
+
+  const services = [
+    {
+      title: "Crowns & Bridges",
+      description: "Durable restorations to repair damaged or replace missing teeth",
+      link: "/services/crowns-bridges",
+      image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&auto=format&fit=crop"
+    },
+    {
+      title: "Dental Implants",
+      description: "Permanent tooth replacement solutions that look and feel natural",
+      link: "/services/implants",
+      image: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&auto=format&fit=crop"
+    },
+    {
+      title: "Full Mouth Rehabilitation",
+      description: "Comprehensive treatment to restore complete oral function",
+      link: "/services/full-mouth-rehabilitation",
+      image: "https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=800&auto=format&fit=crop"
+    },
+    {
+      title: "Dentures & Partials",
+      description: "Custom-fitted removable prosthetics for missing teeth",
+      link: "/services/dentures-partials",
+      image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&auto=format&fit=crop"
+    },
+    {
+      title: "Tooth-Colored Fillings",
+      description: "Natural-looking composite fillings that blend seamlessly",
+      link: "/services/tooth-colored-fillings",
+      image: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&auto=format&fit=crop"
+    }
+  ];
+
   return (
-    <ServiceTemplate
-      title="Restorative & Reconstructive Dentistry"
-      subtitle="Restore Your Smile's Function & Beauty"
-      description="Comprehensive solutions for long-term dental health and aesthetics. We specialize in rebuilding and restoring damaged, decayed, or missing teeth with advanced techniques that look and function naturally."
-      icon={<Shield className="w-6 h-6 text-primary" />}
-      benefits={[
-        "Restore full dental function",
-        "Natural-looking results",
-        "Durable, long-lasting solutions",
-        "Improved bite and jaw alignment",
-        "Enhanced facial structure support",
-        "Prevention of further dental damage",
-        "Boost in confidence and quality of life",
-        "Advanced materials and techniques"
-      ]}
-      process={[
-        {
-          step: 1,
-          title: "Comprehensive Assessment",
-          description: "We conduct a detailed evaluation of your dental health, including digital imaging and 3D scans to understand the extent of damage or missing teeth and plan the optimal restoration approach."
-        },
-        {
-          step: 2,
-          title: "Treatment Planning",
-          description: "Our team develops a customized treatment plan that addresses your specific needs, timeline, and budget. We'll explain all options and help you make informed decisions about your care."
-        },
-        {
-          step: 3,
-          title: "Restoration Procedure",
-          description: "Using state-of-the-art technology and techniques, we carefully restore or replace damaged teeth. This may involve multiple visits depending on the complexity of your treatment."
-        },
-        {
-          step: 4,
-          title: "Follow-up & Maintenance",
-          description: "We schedule follow-up appointments to ensure your restorations are functioning properly and provide guidance on maintaining your dental work for long-term success."
-        }
-      ]}
-      faqs={[
-        {
-          question: "What's the difference between a crown and a bridge?",
-          answer: "A crown covers a single damaged tooth to restore its strength and appearance, while a bridge replaces one or more missing teeth by anchoring artificial teeth to adjacent natural teeth or implants."
-        },
-        {
-          question: "How long do dental implants last?",
-          answer: "With proper care and maintenance, dental implants can last a lifetime. The crown attached to the implant may need replacement after 10-15 years, but the implant itself is designed to be permanent."
-        },
-        {
-          question: "Are tooth-colored fillings as strong as silver fillings?",
-          answer: "Modern composite (tooth-colored) fillings are very strong and durable, suitable for most applications. They also bond directly to the tooth structure, providing additional support and a more natural appearance."
-        },
-        {
-          question: "What is full mouth rehabilitation?",
-          answer: "Full mouth rehabilitation is a comprehensive treatment plan that addresses multiple dental issues simultaneously, including damaged, decayed, or missing teeth. It combines various procedures to restore complete oral health and function."
-        }
-      ]}
-      relatedServices={[
-        { name: "Crowns & Bridges", link: "/services/crowns-bridges" },
-        { name: "Dental Implants", link: "/services/implants" },
-        { name: "Full Mouth Rehabilitation", link: "/services/full-mouth-rehabilitation" },
-        { name: "Dentures & Partials", link: "/services/dentures-partials" },
-        { name: "Tooth-Colored Fillings", link: "/services/tooth-colored-fillings" }
-      ]}
-    />
+    <div className="min-h-screen bg-background">
+      <SiteHeader />
+      
+      {/* Hero Section */}
+      <section className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-br from-background via-muted/10 to-background">
+        <div className="absolute top-20 right-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float"></div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div
+            ref={headerRef}
+            className={`max-w-4xl mx-auto text-center ${headerInView ? 'animate-slide-in-up' : 'opacity-0'}`}
+          >
+            <div className="inline-flex items-center px-6 py-3 rounded-full glass-card mb-6 glow-primary">
+              <Shield className="w-5 h-5 text-primary mr-2" />
+              <span className="font-medium text-foreground">RESTORE YOUR SMILE</span>
+            </div>
+            <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 leading-tight">
+              <span className="text-gradient-animate">Restorative &</span> Reconstructive Dentistry
+            </h1>
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-8">
+              Comprehensive solutions for long-term dental health and aesthetics.
+            </p>
+            <Button size="xl" className="group transform transition-all duration-300 hover:scale-105">
+              Schedule Consultation
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Introduction Section */}
+      <section className="py-20 bg-muted/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-foreground">
+              At Smile Innovation,
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              we specialize in rebuilding and restoring damaged, decayed, or missing teeth with advanced techniques that look and function naturally. Our comprehensive approach ensures lasting results that improve both your oral health and quality of life.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-center mb-12 text-foreground">
+            Advanced Restorative Solutions
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {services.map((service, index) => (
+              <Card 
+                key={index}
+                className="glass-card border-0 overflow-hidden hover:shadow-2xl transition-all duration-300 group animate-slide-in-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="relative h-64 overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-display font-bold mb-3 text-foreground group-hover:text-primary transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground mb-6">
+                    {service.description}
+                  </p>
+                  <Button variant="outline" asChild className="w-full group/btn">
+                    <Link to={service.link}>
+                      Learn More
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-center mb-16 text-foreground">
+            Why Choose Smile Innovation
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            {[
+              { number: "01", title: "Advanced technology and equipment" },
+              { number: "02", title: "Personalized patient care" },
+              { number: "03", title: "Expert dental team" },
+              { number: "04", title: "Commitment to comfort and convenience" }
+            ].map((item, index) => (
+              <div key={index} className="text-center">
+                <div className="text-6xl font-bold text-primary/20 mb-4">{item.number}</div>
+                <h3 className="text-xl font-semibold text-foreground">{item.title}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-br from-primary to-innovation text-primary-foreground text-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
+            Restore Your Smile's Function and Beauty
+          </h2>
+          <Button variant="secondary" size="xl" className="group transform transition-all duration-300 hover:scale-105">
+            SCHEDULE NOW
+            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </Button>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
   );
 };
 
 export default RestorativeReconstructive;
-
-
