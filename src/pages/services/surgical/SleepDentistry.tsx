@@ -8,7 +8,7 @@ const SleepDentistry = () => {
       subtitle="Surgical & Emergency Dentistry"
       description="Overcome dental anxiety and fear with safe, effective sedation dentistry. Whether you need a simple cleaning or complex procedure, our sedation options help you feel relaxed and comfortable throughout your treatment—making it possible to complete dental work you've been avoiding."
       icon={<Zap className="w-6 h-6 text-primary" />}
-      heroImage="https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=800&auto=format&fit=crop"
+      heroImage="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&auto=format&fit=crop&q=85"
       benefits={[
         "Overcome dental anxiety and fear",
         "Painless, comfortable experience",

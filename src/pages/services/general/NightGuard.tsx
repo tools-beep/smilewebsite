@@ -8,7 +8,7 @@ const NightGuard = () => {
       subtitle="General & Family Dentistry"
       description="Protect your teeth from nighttime grinding and clenching with a custom-fitted night guard. These comfortable, durable appliances prevent tooth damage, reduce jaw pain, and improve sleep quality—providing relief and long-term protection."
       icon={<Heart className="w-6 h-6 text-primary" />}
-      heroImage="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&auto=format&fit=crop"
+      heroImage="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&auto=format&fit=crop"
       benefits={[
         "Prevents tooth wear and damage",
         "Reduces jaw pain and headaches",

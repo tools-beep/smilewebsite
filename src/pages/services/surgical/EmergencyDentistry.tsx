@@ -8,7 +8,7 @@ const EmergencyDentistry = () => {
       subtitle="Surgical & Emergency Dentistry"
       description="Fast, effective care when you need it most. Our emergency dental services provide immediate relief from pain, trauma, and urgent dental issues. We're equipped to handle any dental emergency with compassion, skill, and advanced technology—getting you out of pain quickly."
       icon={<Zap className="w-6 h-6 text-primary" />}
-      heroImage="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&auto=format&fit=crop"
+      heroImage="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&auto=format&fit=crop&q=85"
       benefits={[
         "Same-day emergency appointments",
         "Immediate pain relief",

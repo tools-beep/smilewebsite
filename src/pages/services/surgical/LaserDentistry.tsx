@@ -8,7 +8,7 @@ const LaserDentistry = () => {
       subtitle="Surgical & Emergency Dentistry"
       description="Experience the future of dental care with advanced laser technology. Laser dentistry offers a minimally invasive, often pain-free alternative to traditional methods—reducing discomfort, speeding healing, and improving treatment outcomes for a wide range of procedures."
       icon={<Zap className="w-6 h-6 text-primary" />}
-      heroImage="https://images.unsplash.com/photo-1629909615957-be38b5894a9f?w=800&auto=format&fit=crop"
+      heroImage="https://images.unsplash.com/photo-1598136605814-6e86e5f5e1e7?w=800&auto=format&fit=crop"
       benefits={[
         "Minimally invasive treatment",
         "Less pain and discomfort",

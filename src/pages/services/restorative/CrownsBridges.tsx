@@ -8,7 +8,7 @@ const CrownsBridges = () => {
       subtitle="Restorative & Reconstructive Dentistry"
       description="Restore damaged teeth and replace missing ones with custom dental crowns and bridges. These durable, natural-looking restorations rebuild your smile's strength, function, and appearance—giving you the confidence to eat, speak, and smile without worry."
       icon={<Shield className="w-6 h-6 text-primary" />}
-      heroImage="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&auto=format&fit=crop"
+      heroImage="https://images.unsplash.com/photo-1598256989875-3a2c7bbf54e6?w=800&auto=format&fit=crop"
       benefits={[
         "Restore full tooth function and strength",
         "Natural-looking, custom-crafted results",

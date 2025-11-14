@@ -8,7 +8,7 @@ const SealantsFluoride = () => {
       subtitle="General & Family Dentistry"
       description="Powerful preventive treatments that protect teeth from decay. Dental sealants provide a protective barrier over vulnerable tooth surfaces, while fluoride strengthens enamel and reverses early decay—keeping smiles healthy for years to come."
       icon={<Heart className="w-6 h-6 text-primary" />}
-      heroImage="https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=800&auto=format&fit=crop"
+      heroImage="https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&auto=format&fit=crop"
       benefits={[
         "Effective cavity prevention",
         "Quick, painless application",
