@@ -61,11 +61,11 @@ const About = () => {
             
             <h1 className="text-5xl md:text-7xl font-display font-bold leading-tight mb-6">
               Compassionate Dental Care Starts With <span className="text-gradient-animate">Our Doctors</span>
-            </h1>
+          </h1>
             
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
               Get to know the leaders behind Smile Innovation's patient-first philosophy in Tempe, AZ.
-            </p>
+          </p>
 
             <Button size="xl" className="group transform transition-all duration-300 hover:scale-105">
               Schedule a Visit
@@ -87,15 +87,15 @@ const About = () => {
                   alt="Dental team at work"
                   className="rounded-3xl shadow-2xl relative z-10"
                 />
-              </div>
-              
+        </div>
+
               <div>
                 <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-foreground">
                   Meet the Doctors at Smile Innovation
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  Compassionate care, advanced expertise, and a commitment to helping you smile brighter.
-                </p>
+            Compassionate care, advanced expertise, and a commitment to helping you smile brighter.
+          </p>
                 <Button variant="premium" size="xl" className="group transform transition-all duration-300 hover:scale-105">
                   Schedule Your Appointment
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -121,16 +121,16 @@ const About = () => {
                 <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                   <p>
                     At Smile Innovation, we believe great dentistry starts with connection and trust. That's why we're proud to introduce you to our leadership team—two dedicated professionals who bring decades of clinical experience, cutting-edge dental techniques, and a genuine love for the Tempe community.
-                  </p>
+            </p>
                   <p>
                     Whether you're here for a routine visit or a full smile transformation, Dr. Boyd and Dr. Linda Ma are here to guide your journey with precision, warmth, and purpose.
-                  </p>
+            </p>
                 </div>
               </CardContent>
             </Card>
           </div>
         </div>
-      </section>
+          </section>
 
       {/* Doctor Profiles */}
       <section
@@ -162,8 +162,8 @@ const About = () => {
                     </h3>
                     
                     <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                      With over 20 years of hands-on experience, Dr. Boyd is known for his calming presence, attention to detail, and passion for restoring confidence through dentistry. He specializes in cosmetic and restorative procedures, blending function with natural aesthetics.
-                    </p>
+              With over 20 years of hands-on experience, Dr. Boyd is known for his calming presence, attention to detail, and passion for restoring confidence through dentistry. He specializes in cosmetic and restorative procedures, blending function with natural aesthetics.
+            </p>
 
                     <div className="space-y-4 mb-8">
                       <div className="flex items-start">
@@ -247,8 +247,8 @@ const About = () => {
               </CardContent>
             </Card>
           </div>
-        </div>
-      </section>
+            </div>
+          </section>
 
       {/* Why Our Patients Choose Us */}
       <section
@@ -286,8 +286,8 @@ const About = () => {
               })}
             </div>
           </div>
-        </div>
-      </section>
+            </div>
+          </section>
 
       {/* Final CTA */}
       <section className="py-20 bg-gradient-to-br from-primary to-innovation text-primary-foreground">

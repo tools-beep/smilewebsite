@@ -8,7 +8,7 @@ const Implants = () => {
       subtitle="Restorative & Reconstructive Dentistry"
       description="Replace missing teeth with the gold standard in tooth replacement. Dental implants provide a permanent, natural-looking solution that looks, feels, and functions just like your natural teeth—restoring your smile and preserving your jawbone health."
       icon={<Shield className="w-6 h-6 text-primary" />}
-      heroImage="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&auto=format&fit=crop&q=85"
+      heroImage="/assets/restorativeandreconstructive/dentalimplants.png"
       benefits={[
         "Most natural-looking tooth replacement",
         "Permanent, long-lasting solution",

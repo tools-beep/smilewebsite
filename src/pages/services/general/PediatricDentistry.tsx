@@ -8,7 +8,7 @@ const PediatricDentistry = () => {
       subtitle="General & Family Dentistry"
       description="Specialized dental care for infants, children, and adolescents. Our gentle, child-friendly approach creates positive dental experiences that set the foundation for a lifetime of healthy smiles. We make dentistry fun and stress-free for kids!"
       icon={<Heart className="w-6 h-6 text-primary" />}
-      heroImage="https://images.unsplash.com/photo-1626719624783-28c339f1f75a?w=800&auto=format&fit=crop"
+      heroImage="/assets/generalandfamily/pediaticdentistry.png"
       benefits={[
         "Child-friendly, welcoming environment",
         "Gentle, patient-centered care",

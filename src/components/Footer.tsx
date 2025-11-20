@@ -1,26 +1,27 @@
 import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Twitter, href: "#", label: "Twitter" }
+    { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
+    { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
+    { icon: Twitter, href: "https://twitter.com", label: "Twitter" }
   ];
 
   const quickLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Services", href: "#services" },
-    { name: "About", href: "#about" },
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
+    { name: "About", href: "/about" },
     { name: "Contact", href: "#contact" }
   ];
 
   const services = [
-    "Cosmetic Dentistry",
-    "Laser Dentistry",
-    "Digital Diagnostics", 
-    "Preventive Care",
-    "Restorative Dentistry",
-    "Orthodontics"
+    { name: "Cosmetic Dentistry", href: "/services/cosmetic-dentistry" },
+    { name: "Laser Dentistry", href: "/services/laser-dentistry" },
+    { name: "General & Family", href: "/services/general-family" },
+    { name: "Preventive Care", href: "/services/cleaning-exams" },
+    { name: "Restorative Dentistry", href: "/services/restorative-reconstructive" },
+    { name: "Orthodontics", href: "/services/invisalign" }
   ];
 
   return (
@@ -32,9 +33,13 @@ const Footer = () => {
           
           {/* Brand Section */}
           <div className="lg:col-span-1">
-            <h3 className="text-2xl font-display font-bold mb-4">
-              Smile Innovations
-            </h3>
+            <Link to="/" className="inline-block mb-6">
+              <img 
+                src="/smilelogo.png" 
+                alt="Smile Innovation Logo" 
+                className="h-12 w-auto brightness-0 invert"
+              />
+            </Link>
             <p className="text-background/80 mb-6 leading-relaxed">
               Experience the future of dental care with our cutting-edge technology and compassionate approach to oral health.
             </p>
@@ -63,12 +68,21 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a 
-                    href={link.href}
-                    className="text-background/80 hover:text-primary transition-smooth"
-                  >
-                    {link.name}
-                  </a>
+                  {link.href.startsWith('#') ? (
+                    <a 
+                      href={link.href}
+                      className="text-background/80 hover:text-primary transition-smooth"
+                    >
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link 
+                      to={link.href}
+                      className="text-background/80 hover:text-primary transition-smooth"
+                    >
+                      {link.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -80,9 +94,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {services.map((service, index) => (
                 <li key={index}>
-                  <span className="text-background/80">
-                    {service}
-                  </span>
+                  <Link 
+                    to={service.href}
+                    className="text-background/80 hover:text-primary transition-smooth"
+                  >
+                    {service.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -95,20 +112,20 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-background/80">123 Innovation Drive</p>
-                  <p className="text-background/80">Tech City, TC 12345</p>
+                  <p className="text-background/80">6323 S Rural Rd #101</p>
+                  <p className="text-background/80">Tempe, AZ 85283, USA</p>
                 </div>
               </div>
               
-              <div className="flex items-center space-x-3">
+              <a href="tel:+14808207777" className="flex items-center space-x-3 hover:text-primary transition-smooth">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <p className="text-background/80">(555) 123-4567</p>
-              </div>
+                <p className="text-background/80">(480) 820-7777</p>
+              </a>
               
-              <div className="flex items-center space-x-3">
+              <a href="mailto:admin@smileinnovation.com" className="flex items-center space-x-3 hover:text-primary transition-smooth">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <p className="text-background/80">hello@smileinnovations.com</p>
-              </div>
+                <p className="text-background/80">admin@smileinnovation.com</p>
+              </a>
             </div>
           </div>
         </div>
@@ -120,15 +137,15 @@ const Footer = () => {
               © 2024 Smile Innovations. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-background/60 hover:text-primary transition-smooth">
+              <Link to="/privacy-policy" className="text-background/60 hover:text-primary transition-smooth">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-background/60 hover:text-primary transition-smooth">
+              </Link>
+              <Link to="/terms-of-service" className="text-background/60 hover:text-primary transition-smooth">
                 Terms of Service
-              </a>
-              <a href="#" className="text-background/60 hover:text-primary transition-smooth">
+              </Link>
+              <Link to="/cookie-policy" className="text-background/60 hover:text-primary transition-smooth">
                 Cookie Policy
-              </a>
+              </Link>
             </div>
           </div>
         </div>

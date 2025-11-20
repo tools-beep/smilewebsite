@@ -8,7 +8,7 @@ const ToothExtraction = () => {
       subtitle="Surgical & Emergency Dentistry"
       description="Safe, gentle tooth removal when necessary. While we always try to save teeth, sometimes extraction is the best option for your overall oral health. We use modern techniques and sedation options to ensure a comfortable experience and promote quick healing."
       icon={<Zap className="w-6 h-6 text-primary" />}
-      heroImage="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&auto=format&fit=crop&q=85"
+      heroImage="/assets/surgicalandemergency/toothextraction.png"
       benefits={[
         "Relief from pain and infection",
         "Gentle, careful technique",

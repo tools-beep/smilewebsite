@@ -8,7 +8,7 @@ const Invisalign = () => {
       subtitle="Book Your Free Invisalign Consultation"
       description="Straighten your teeth discreetly—no metal, no hassle. Invisalign is an advanced orthodontic system that uses a series of clear, custom-made aligners to gently and gradually shift your teeth into alignment. Designed for both adults and teens, Invisalign provides a nearly invisible, highly convenient alternative to traditional metal braces. Each aligner is worn for about 1–2 weeks before progressing to the next in the series, gently guiding your teeth into the desired position—without brackets or wires."
       icon={<Sparkles className="w-6 h-6 text-primary" />}
-      heroImage="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&auto=format&fit=crop"
+          heroImage="/assets/comseticdentistry/Invisalign.png"
       benefits={[
         "Virtually invisible for discreet treatment",
         "Smooth and comfortable compared to braces",

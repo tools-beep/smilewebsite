@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Careers from "./pages/Careers";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import { ThemeProvider } from "next-themes";
 import { AnimatePresence, motion } from "motion/react";
 
@@ -66,6 +67,7 @@ const AnimatedRoutes = () => {
         <Route path="/about" element={<motion.div {...pageTransition}><About /></motion.div>} />
         <Route path="/services" element={<motion.div {...pageTransition}><Services /></motion.div>} />
         <Route path="/careers" element={<motion.div {...pageTransition}><Careers /></motion.div>} />
+        <Route path="/privacy-policy" element={<motion.div {...pageTransition}><PrivacyPolicy /></motion.div>} />
         
         {/* Service Category Pages */}
         <Route path="/services/cosmetic-dentistry" element={<motion.div {...pageTransition}><CosmeticDentistry /></motion.div>} />

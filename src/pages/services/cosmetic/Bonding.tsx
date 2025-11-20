@@ -8,7 +8,7 @@ const Bonding = () => {
       subtitle="Book Your Bonding Appointment"
       description="Dental bonding is a quick, affordable, and effective cosmetic solution to repair and enhance your smile. Using tooth-colored composite resin material, we can seamlessly fix chips, cracks, gaps, discoloration, and minor imperfections in just one comfortable visit—giving you immediate, natural-looking results with minimal tooth preparation."
       icon={<Sparkles className="w-6 h-6 text-primary" />}
-      heroImage="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&auto=format&fit=crop"
+          heroImage="/assets/comseticdentistry/bonding.png"
       benefits={[
         "Fast, single-visit procedure (30-60 minutes per tooth)",
         "Affordable cosmetic solution",

@@ -8,7 +8,7 @@ const CosmeticConsultations = () => {
       subtitle="Book Your Free Cosmetic Consultation"
       description="Start your smile transformation journey with a complimentary cosmetic consultation at Smile Innovation. We'll take the time to understand your aesthetic concerns and goals, evaluate your oral health, and create a personalized treatment plan using advanced digital smile design technology—allowing you to visualize your potential results before committing to treatment."
       icon={<Sparkles className="w-6 h-6 text-primary" />}
-      heroImage="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&auto=format&fit=crop"
+      heroImage="/assets/comseticdentistry/cosmeticconsultation.png"
       benefits={[
         "Complimentary, no-obligation consultation",
         "Comprehensive smile analysis and assessment",

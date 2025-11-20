@@ -62,16 +62,18 @@ export function StickyHeader({
   return (
     <header ref={stickyNavRef} className="sticky top-0 z-50 px-10 py-7 xl:px-0">
       <nav className="relative mx-auto flex max-w-2xl items-center justify-between">
-        <motion.img
-          className="h-10 w-10"
-          src="/favicon.ico"
-          alt="MagicUI Logo"
-          animate={{
-            y: scrollY >= 120 ? -50 : 0,
-            opacity: scrollY >= 120 ? 0 : 1,
-          }}
-          transition={{ duration: 0.15 }}
-        />
+        <Link to="/">
+          <motion.img
+            className="h-12 w-auto"
+            src="/smilelogo.png"
+            alt="Smile Innovation Logo"
+            animate={{
+              y: scrollY >= 120 ? -50 : 0,
+              opacity: scrollY >= 120 ? 0 : 1,
+            }}
+            transition={{ duration: 0.15 }}
+          />
+        </Link>
 
         <ul className="sticky top-4 right-4 left-4 z-[60] hidden items-center justify-center gap-x-5 md:flex">
           <motion.div
@@ -293,13 +295,15 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 px-10 py-7 xl:px-0 bg-background/60 backdrop-blur-md">
       <nav className="relative mx-auto flex max-w-6xl items-center justify-between">
-        <motion.img
-          className="h-8 w-8"
-          src="/favicon.ico"
-          alt="Logo"
-          animate={{ y: scrollY >= 120 ? -50 : 0, opacity: scrollY >= 120 ? 0 : 1 }}
-          transition={{ duration: 0.15 }}
-        />
+        <Link to="/">
+          <motion.img
+            className="h-10 w-auto"
+            src="/smilelogo.png"
+            alt="Smile Innovation Logo"
+            animate={{ y: scrollY >= 120 ? -50 : 0, opacity: scrollY >= 120 ? 0 : 1 }}
+            transition={{ duration: 0.15 }}
+          />
+        </Link>
         <motion.div
           initial={{ x: 0 }}
           animate={{
@@ -324,27 +328,27 @@ export function SiteHeader() {
                       <div className="absolute left-0 top-full h-4 w-full hidden group-hover:block"></div>
                       <div className="absolute left-0 top-full pt-4 hidden rounded-xl group-hover:block z-50 w-[560px]">
                         <div className="border bg-background p-3 shadow-lg rounded-xl">
-                          <div className="grid grid-cols-2 gap-4">
-                            <ul className="flex flex-col">
-                              {(navItem as any).children.map((child: any, idx: number) => (
-                                <li
-                                  key={child.id}
+                      <div className="grid grid-cols-2 gap-4">
+                        <ul className="flex flex-col">
+                          {(navItem as any).children.map((child: any, idx: number) => (
+                            <li
+                              key={child.id}
                                   className={`px-3 py-2 rounded-md cursor-pointer hover:bg-accent hover:text-accent-foreground transition-colors ${idx === activeServiceIndex ? 'bg-accent/50' : ''}`}
-                                  onMouseEnter={() => setActiveServiceIndex(idx)}
-                                >
+                              onMouseEnter={() => setActiveServiceIndex(idx)}
+                            >
                                   <Link to={child.link} className="block">{child.label}</Link>
-                                </li>
-                              ))}
-                            </ul>
-                            <ul className="flex flex-col">
-                              {((navItem as any).children[activeServiceIndex]?.items || []).map((item: any) => (
+                            </li>
+                          ))}
+                        </ul>
+                        <ul className="flex flex-col">
+                          {((navItem as any).children[activeServiceIndex]?.items || []).map((item: any) => (
                                 <li key={item.id} className="px-3 py-2 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors">
                                   <Link to={item.link} className="block">{item.label}</Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
                       </div>
                     </>
                   )}

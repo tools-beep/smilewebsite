@@ -8,7 +8,7 @@ const OralSurgery = () => {
       subtitle="Surgical & Emergency Dentistry"
       description="Advanced surgical procedures performed with precision and care. From wisdom teeth removal to complex extractions, bone grafting, and pre-implant surgery, our experienced team uses modern techniques and sedation options to ensure your comfort and optimal outcomes."
       icon={<Zap className="w-6 h-6 text-primary" />}
-      heroImage="https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=800&auto=format&fit=crop&q=80"
+      heroImage="/assets/surgicalandemergency/oralsurgery.png"
       benefits={[
         "Experienced surgical team",
         "Advanced surgical techniques",

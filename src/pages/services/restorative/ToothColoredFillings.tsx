@@ -8,7 +8,7 @@ const ToothColoredFillings = () => {
       subtitle="Restorative & Reconstructive Dentistry"
       description="Repair cavities and damaged teeth with modern composite resin fillings that match your natural tooth color. These mercury-free restorations are strong, durable, and virtually invisible—preserving more of your natural tooth structure while providing a beautiful, seamless result."
       icon={<Shield className="w-6 h-6 text-primary" />}
-      heroImage="https://images.unsplash.com/photo-1629909615957-be38b5894a9f?w=800&auto=format&fit=crop&q=85"
+      heroImage="/assets/restorativeandreconstructive/toothcolored.png"
       benefits={[
         "Natural appearance matches your teeth",
         "Mercury-free and safe",
