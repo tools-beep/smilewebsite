@@ -70,10 +70,12 @@ const SurgicalEmergency = () => {
             <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-8">
               Providing quick relief and comprehensive surgical solutions.
             </p>
-            <Button size="xl" className="group transform transition-all duration-300 hover:scale-105">
-              Call for Emergency
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <a href="tel:+14808207777">
+              <Button size="xl" className="group transform transition-all duration-300 hover:scale-105">
+                Call for Emergency
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -161,10 +163,12 @@ const SurgicalEmergency = () => {
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
             Need Emergency Dental Care?
           </h2>
-          <Button variant="secondary" size="xl" className="group transform transition-all duration-300 hover:scale-105">
-            CALL NOW: (480) 820-7777
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          <a href="tel:+14808207777">
+            <Button variant="secondary" size="xl" className="group transform transition-all duration-300 hover:scale-105">
+              CALL NOW: (480) 820-7777
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </a>
         </div>
       </section>
 

@@ -64,10 +64,12 @@ const RestorativeReconstructive = () => {
             <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-8">
               Comprehensive solutions for long-term dental health and aesthetics.
             </p>
-            <Button size="xl" className="group transform transition-all duration-300 hover:scale-105">
-              Schedule Consultation
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <a href="tel:+14808207777">
+              <Button size="xl" className="group transform transition-all duration-300 hover:scale-105">
+                Schedule Consultation
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -155,10 +157,12 @@ const RestorativeReconstructive = () => {
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
             Restore Your Smile's Function and Beauty
           </h2>
-          <Button variant="secondary" size="xl" className="group transform transition-all duration-300 hover:scale-105">
-            SCHEDULE NOW
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          <a href="tel:+14808207777">
+            <Button variant="secondary" size="xl" className="group transform transition-all duration-300 hover:scale-105">
+              SCHEDULE NOW
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </a>
         </div>
       </section>
 

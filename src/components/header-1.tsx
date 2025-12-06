@@ -131,7 +131,7 @@ export function StickyHeader({
                   >
                     <li>
                       <a
-                        href="#"
+                        href="#contact"
                         className="bg-primary text-primary-foreground relative inline-flex w-fit items-center justify-center gap-x-1.5 overflow-hidden rounded-full px-3 py-1.5 outline-none"
                       >
                         Get Started
@@ -152,7 +152,11 @@ export function StickyHeader({
           }}
           transition={{ duration: 0.15 }}
         >
-          <button>Get Started</button>
+          <a href="#contact">
+            <button className="bg-primary text-primary-foreground px-4 py-2 rounded-full hover:bg-primary/90 transition-colors">
+              Get Started
+            </button>
+          </a>
         </motion.div>
         <MotionConfig transition={{ duration: 0.3, ease: "easeInOut" }}>
           <motion.button

@@ -67,10 +67,12 @@ const About = () => {
               Get to know the leaders behind Smile Innovation's patient-first philosophy in Tempe, AZ.
           </p>
 
-            <Button size="xl" className="group transform transition-all duration-300 hover:scale-105">
-              Schedule a Visit
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <a href="tel:+14808207777">
+              <Button size="xl" className="group transform transition-all duration-300 hover:scale-105">
+                Schedule a Visit
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -96,10 +98,12 @@ const About = () => {
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8">
             Compassionate care, advanced expertise, and a commitment to helping you smile brighter.
           </p>
-                <Button variant="premium" size="xl" className="group transform transition-all duration-300 hover:scale-105">
-                  Schedule Your Appointment
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                <a href="tel:+14808207777">
+                  <Button variant="premium" size="xl" className="group transform transition-all duration-300 hover:scale-105">
+                    Schedule Your Appointment
+                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
@@ -184,10 +188,12 @@ const About = () => {
                       </div>
                     </div>
 
-                    <Button variant="outline" size="lg" className="group">
-                      Learn More about Dr. Boyd
-                      <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </Button>
+                    <a href="#contact">
+                      <Button variant="outline" size="lg" className="group">
+                        Contact Dr. Boyd
+                        <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </CardContent>
@@ -229,10 +235,12 @@ const About = () => {
                       </div>
                     </div>
 
-                    <Button variant="outline" size="lg" className="group">
-                      Learn More about Dr. Ma
-                      <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </Button>
+                    <a href="#contact">
+                      <Button variant="outline" size="lg" className="group">
+                        Contact Dr. Ma
+                        <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                      </Button>
+                    </a>
                   </div>
 
                   <div className="md:col-span-2 relative h-[400px] md:h-auto order-1 md:order-2">
@@ -296,14 +304,16 @@ const About = () => {
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 leading-tight">
               Let our doctors help you smile with confidence — your journey starts with one click.
             </h2>
-            <Button 
-              variant="secondary" 
-              size="xl" 
-              className="group transform transition-all duration-300 hover:scale-105"
-            >
-              Book Your Appointment Today
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <a href="tel:+14808207777">
+              <Button 
+                variant="secondary" 
+                size="xl" 
+                className="group transform transition-all duration-300 hover:scale-105"
+              >
+                Book Your Appointment Today
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </a>
           </div>
         </div>
       </section>

@@ -54,23 +54,27 @@ const VideoCallToAction = () => {
 
             {/* Call to Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button 
-                variant="premium" 
-                size="xl"
-                className="group transform transition-all duration-300 hover:scale-110 shadow-2xl"
-              >
-                <Calendar className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
-                Book Your Appointment
-              </Button>
+              <a href="tel:+14808207777">
+                <Button 
+                  variant="premium" 
+                  size="xl"
+                  className="group transform transition-all duration-300 hover:scale-110 shadow-2xl"
+                >
+                  <Calendar className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
+                  Book Your Appointment
+                </Button>
+              </a>
               
-              <Button 
-                variant="outline" 
-                size="xl"
-                className="bg-white/10 backdrop-blur-md border-white/30 text-white hover:bg-white hover:text-primary transition-all duration-300"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Call: (480) 820-7777
-              </Button>
+              <a href="tel:+14808207777">
+                <Button 
+                  variant="outline" 
+                  size="xl"
+                  className="bg-white/10 backdrop-blur-md border-white/30 text-white hover:bg-white hover:text-primary transition-all duration-300"
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call: (480) 820-7777
+                </Button>
+              </a>
             </div>
 
             {/* Additional Info */}

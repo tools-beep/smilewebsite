@@ -67,23 +67,27 @@ const ServiceTemplate = ({
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                  <Button 
-                    variant="premium" 
-                    size="xl"
-                    className="group transform transition-all duration-300 hover:scale-105"
-                  >
-                    <Calendar className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
-                    Book Consultation
-                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    size="xl"
-                    className="group"
-                  >
-                    <Phone className="w-5 h-5 mr-2" />
-                    Call Us: (480) 820-7777
-                  </Button>
+                  <a href="tel:+14808207777">
+                    <Button 
+                      variant="premium" 
+                      size="xl"
+                      className="group transform transition-all duration-300 hover:scale-105"
+                    >
+                      <Calendar className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
+                      Book Consultation
+                      <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </a>
+                  <a href="tel:+14808207777">
+                    <Button 
+                      variant="outline" 
+                      size="xl"
+                      className="group"
+                    >
+                      <Phone className="w-5 h-5 mr-2" />
+                      Call Us: (480) 820-7777
+                    </Button>
+                  </a>
                 </div>
               </div>
               
@@ -264,14 +268,16 @@ const ServiceTemplate = ({
                   Schedule your consultation today and take the first step towards your perfect smile
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button 
-                    variant="premium" 
-                    size="xl"
-                    className="group transform transition-all duration-300 hover:scale-105"
-                  >
-                    <Calendar className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
-                    Schedule Consultation
-                  </Button>
+                  <a href="tel:+14808207777">
+                    <Button 
+                      variant="premium" 
+                      size="xl"
+                      className="group transform transition-all duration-300 hover:scale-105"
+                    >
+                      <Calendar className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
+                      Schedule Consultation
+                    </Button>
+                  </a>
                   <Button 
                     variant="outline" 
                     size="xl"

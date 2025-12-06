@@ -2,32 +2,61 @@ import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useState } from "react";
 
 const ContactSection = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: ""
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Open email client with form data
+    const subject = encodeURIComponent("New Contact Form Submission");
+    const body = encodeURIComponent(
+      `Name: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
+    );
+    window.location.href = `mailto:admin@smileinnovation.com?subject=${subject}&body=${body}`;
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }));
+  };
+
   const contactInfo = [
     {
       icon: Phone,
       title: "Phone",
-      details: "(555) 123-4567",
-      subtitle: "24/7 Emergency Line"
+      details: "(480) 820-7777",
+      subtitle: "24/7 Emergency Line",
+      href: "tel:+14808207777"
     },
     {
       icon: Mail,
       title: "Email",
-      details: "hello@smileinnovations.com",
-      subtitle: "We'll respond within 24hrs"
+      details: "admin@smileinnovation.com",
+      subtitle: "We'll respond within 24hrs",
+      href: "mailto:admin@smileinnovation.com"
     },
     {
       icon: MapPin,
       title: "Location",
-      details: "123 Innovation Drive, Tech City",
-      subtitle: "Easy parking available"
+      details: "6323 S Rural Rd #101, Tempe, AZ 85283",
+      subtitle: "Easy parking available",
+      href: "https://maps.google.com/?q=6323+S+Rural+Rd+%23101,+Tempe,+AZ+85283"
     },
     {
       icon: Clock,
       title: "Hours",
-      details: "Mon-Fri: 8AM-6PM",
-      subtitle: "Sat: 9AM-3PM, Sun: Closed"
+      details: "Mon-Fri: 8AM-5PM",
+      subtitle: "Sat-Sun: Closed"
     }
   ];
 
@@ -56,7 +85,7 @@ const ContactSection = () => {
               Send us a message
             </h3>
             
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
@@ -64,7 +93,11 @@ const ContactSection = () => {
                   </label>
                   <Input 
                     type="text" 
+                    name="firstName"
                     placeholder="John"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    required
                     className="glass-card border-0 focus:ring-2 focus:ring-primary/50 transition-smooth"
                   />
                 </div>
@@ -74,7 +107,11 @@ const ContactSection = () => {
                   </label>
                   <Input 
                     type="text" 
+                    name="lastName"
                     placeholder="Doe"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    required
                     className="glass-card border-0 focus:ring-2 focus:ring-primary/50 transition-smooth"
                   />
                 </div>
@@ -86,7 +123,11 @@ const ContactSection = () => {
                 </label>
                 <Input 
                   type="email" 
+                  name="email"
                   placeholder="john@example.com"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
                   className="glass-card border-0 focus:ring-2 focus:ring-primary/50 transition-smooth"
                 />
               </div>
@@ -97,7 +138,10 @@ const ContactSection = () => {
                 </label>
                 <Input 
                   type="tel" 
-                  placeholder="(555) 123-4567"
+                  name="phone"
+                  placeholder="(480) 555-1234"
+                  value={formData.phone}
+                  onChange={handleChange}
                   className="glass-card border-0 focus:ring-2 focus:ring-primary/50 transition-smooth"
                 />
               </div>
@@ -107,8 +151,12 @@ const ContactSection = () => {
                   Message
                 </label>
                 <Textarea 
+                  name="message"
                   placeholder="Tell us about your dental needs or questions..."
                   rows={4}
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
                   className="glass-card border-0 focus:ring-2 focus:ring-primary/50 transition-smooth resize-none"
                 />
               </div>
@@ -134,8 +182,8 @@ const ContactSection = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {contactInfo.map((info, index) => {
                   const IconComponent = info.icon;
-                  return (
-                    <div key={index} className="flex items-start space-x-4">
+                  const content = (
+                    <div className="flex items-start space-x-4">
                       <div className="bg-gradient-primary rounded-xl p-3 glow-primary">
                         <IconComponent className="w-6 h-6 text-white" />
                       </div>
@@ -152,22 +200,43 @@ const ContactSection = () => {
                       </div>
                     </div>
                   );
+                  
+                  return info.href ? (
+                    <a 
+                      key={index} 
+                      href={info.href}
+                      target={info.href.startsWith('https') ? '_blank' : undefined}
+                      rel={info.href.startsWith('https') ? 'noopener noreferrer' : undefined}
+                      className="hover:opacity-80 transition-opacity"
+                    >
+                      {content}
+                    </a>
+                  ) : (
+                    <div key={index}>{content}</div>
+                  );
                 })}
               </div>
             </div>
 
-            {/* Map Placeholder */}
+            {/* Map */}
             <div className="glass-card p-8 rounded-2xl">
               <h4 className="font-display font-semibold text-lg mb-4 text-foreground">
                 Find Us
               </h4>
-              <div className="bg-gradient-primary rounded-xl h-48 flex items-center justify-center glow-primary">
-                <div className="text-center text-white">
-                  <MapPin className="w-12 h-12 mx-auto mb-3" />
-                  <p className="font-medium">Interactive Map</p>
-                  <p className="text-sm opacity-90">Click to view directions</p>
+              <a 
+                href="https://maps.google.com/?q=6323+S+Rural+Rd+%23101,+Tempe,+AZ+85283"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <div className="bg-gradient-primary rounded-xl h-48 flex items-center justify-center glow-primary hover:opacity-90 transition-opacity cursor-pointer">
+                  <div className="text-center text-white">
+                    <MapPin className="w-12 h-12 mx-auto mb-3" />
+                    <p className="font-medium">6323 S Rural Rd #101</p>
+                    <p className="text-sm opacity-90">Tempe, AZ 85283 - Click for directions</p>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
 
             {/* Emergency Contact */}
@@ -178,11 +247,13 @@ const ContactSection = () => {
                   Dental Emergency?
                 </h4>
                 <p className="mb-4 opacity-90">
-                  We're available 24/7 for urgent dental care
+                  Call us for urgent dental care
                 </p>
-                <Button variant="secondary" className="bg-white text-innovation hover:bg-white/90 transition-smooth">
-                  Call Emergency Line
-                </Button>
+                <a href="tel:+14808207777">
+                  <Button variant="secondary" className="bg-white text-innovation hover:bg-white/90 transition-smooth">
+                    Call (480) 820-7777
+                  </Button>
+                </a>
               </div>
             </div>
           </div>

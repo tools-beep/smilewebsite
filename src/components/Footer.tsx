@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   const socialLinks = [
-    { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
-    { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-    { icon: Twitter, href: "https://twitter.com", label: "Twitter" }
+    { icon: Facebook, href: "https://www.facebook.com/smileinnovationtempe", label: "Facebook" },
+    { icon: Instagram, href: "https://www.instagram.com/smileinnovationtempe", label: "Instagram" }
   ];
 
   const quickLinks = [
@@ -134,7 +133,7 @@ const Footer = () => {
         <div className="border-t border-background/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-background/60 text-sm">
-              © 2024 Smile Innovations. All rights reserved.
+              © {new Date().getFullYear()} Smile Innovation. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
               <Link to="/privacy-policy" className="text-background/60 hover:text-primary transition-smooth">

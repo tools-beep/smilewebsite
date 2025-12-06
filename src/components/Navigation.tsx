@@ -62,14 +62,16 @@ const Navigation = () => {
 
           {/* Enhanced CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button 
-              variant="premium" 
-              className="group relative overflow-hidden transform transition-all duration-300 hover:scale-105"
-            >
-              <Calendar className="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform" />
-              Book Appointment
-              <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
-            </Button>
+            <a href="tel:+14808207777">
+              <Button 
+                variant="premium" 
+                className="group relative overflow-hidden transform transition-all duration-300 hover:scale-105"
+              >
+                <Calendar className="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform" />
+                Book Appointment
+                <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+              </Button>
+            </a>
           </div>
 
           {/* Enhanced Mobile menu button */}
@@ -109,13 +111,15 @@ const Navigation = () => {
                 </a>
               ))}
               <div className="pt-4">
-                <Button 
-                  variant="premium" 
-                  className="w-full group transform transition-all duration-300 hover:scale-105"
-                >
-                  <Calendar className="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform" />
-                  Book Appointment
-                </Button>
+                <a href="tel:+14808207777">
+                  <Button 
+                    variant="premium" 
+                    className="w-full group transform transition-all duration-300 hover:scale-105"
+                  >
+                    <Calendar className="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform" />
+                    Book Appointment
+                  </Button>
+                </a>
               </div>
             </div>
           </div>

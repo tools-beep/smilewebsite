@@ -66,22 +66,26 @@ const HeroSection = () => {
 
             {/* Enhanced CTA Buttons */}
             <div className={`flex flex-col sm:flex-row gap-6 ${isInView ? 'animate-slide-in-up' : ''}`} style={{ animationDelay: '0.6s' }}>
-              <Button 
-                variant="premium"
-                size="xl"
-                className="group transform transition-all duration-300 hover:scale-105"
-              >
-                Book Your Appointment
-                <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button 
-                variant="glass"
-                size="xl"
-                className="group transform transition-all duration-300 hover:scale-105"
-              >
-                Explore Our Services
-                <Sparkles className="ml-3 w-6 h-6 group-hover:rotate-12 transition-transform" />
-              </Button>
+              <a href="tel:+14808207777">
+                <Button 
+                  variant="premium"
+                  size="xl"
+                  className="group transform transition-all duration-300 hover:scale-105"
+                >
+                  Book Your Appointment
+                  <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
+              <a href="#services">
+                <Button 
+                  variant="glass"
+                  size="xl"
+                  className="group transform transition-all duration-300 hover:scale-105"
+                >
+                  Explore Our Services
+                  <Sparkles className="ml-3 w-6 h-6 group-hover:rotate-12 transition-transform" />
+                </Button>
+              </a>
             </div>
           </div>
 
