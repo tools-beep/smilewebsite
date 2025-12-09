@@ -107,7 +107,7 @@ const ServicesSection = () => {
             <span className="font-medium text-foreground">Our Services</span>
           </div>
           
-          <h2 className="text-5xl md:text-7xl font-display font-bold mb-8 leading-tight">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold mb-8 leading-tight">
             <span className="text-foreground">Advanced </span>
             <span className="text-gradient-animate">
               Dental Solutions
@@ -208,7 +208,7 @@ const ServicesSection = () => {
           <div className="glass-card rounded-3xl p-8 md:p-12 max-w-4xl mx-auto">
             <div className="flex flex-col md:flex-row items-center justify-between gap-8">
               <div className="text-left">
-                <h3 className="text-3xl md:text-4xl font-display font-bold mb-4">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold mb-4 text-center md:text-left">
                   Ready to Transform Your Smile?
                 </h3>
                 <p className="text-lg text-muted-foreground">
@@ -216,14 +216,16 @@ const ServicesSection = () => {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 flex-shrink-0">
-                <Button 
-                  variant="premium" 
-                  size="xl" 
-                  className="group transform transition-all duration-300 hover:scale-105"
-                >
-                  Schedule Consultation
-                  <Sparkles className="ml-3 w-6 h-6 group-hover:rotate-12 transition-transform" />
-                </Button>
+                <a href="tel:+14808207777">
+                  <Button 
+                    variant="premium" 
+                    size="xl" 
+                    className="group transform transition-all duration-300 hover:scale-105"
+                  >
+                    Schedule Consultation
+                    <Sparkles className="ml-3 w-6 h-6 group-hover:rotate-12 transition-transform" />
+                  </Button>
+                </a>
               </div>
             </div>
           </div>

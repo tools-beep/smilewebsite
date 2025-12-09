@@ -59,11 +59,11 @@ const About = () => {
               <span className="text-sm font-medium">About Our Practice</span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-display font-bold leading-tight mb-6">
+            <h1 className="text-3xl sm:text-5xl md:text-7xl font-display font-bold leading-tight mb-4 sm:mb-6">
               Compassionate Dental Care Starts With <span className="text-gradient-animate">Our Doctors</span>
           </h1>
             
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+            <p className="text-base sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
               Get to know the leaders behind Smile Innovation's patient-first philosophy in Tempe, AZ.
           </p>
 

@@ -11,7 +11,7 @@ const Footer = () => {
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
     { name: "About", href: "/about" },
-    { name: "Contact", href: "#contact" }
+    { name: "Contact", href: "/#contact" }
   ];
 
   const services = [
@@ -25,21 +25,21 @@ const Footer = () => {
 
   return (
     <footer className="bg-foreground text-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
         
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
           
           {/* Brand Section */}
-          <div className="lg:col-span-1">
-            <Link to="/" className="inline-block mb-6">
+          <div className="col-span-2 lg:col-span-1">
+            <Link to="/" className="inline-block mb-4 sm:mb-6">
               <img 
                 src="/smilelogo.png" 
                 alt="Smile Innovation Logo" 
-                className="h-12 w-auto brightness-0 invert"
+                className="h-10 sm:h-12 w-auto brightness-0 invert"
               />
             </Link>
-            <p className="text-background/80 mb-6 leading-relaxed">
+            <p className="text-background/80 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
               Experience the future of dental care with our cutting-edge technology and compassionate approach to oral health.
             </p>
             
@@ -63,21 +63,21 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-display font-semibold text-lg mb-4">Quick Links</h4>
-            <ul className="space-y-3">
+            <h4 className="font-display font-semibold text-base sm:text-lg mb-3 sm:mb-4">Quick Links</h4>
+            <ul className="space-y-2 sm:space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  {link.href.startsWith('#') ? (
+                  {link.href.includes('#') ? (
                     <a 
                       href={link.href}
-                      className="text-background/80 hover:text-primary transition-smooth"
+                      className="text-background/80 hover:text-primary transition-smooth text-sm sm:text-base"
                     >
                       {link.name}
                     </a>
                   ) : (
                     <Link 
                       to={link.href}
-                      className="text-background/80 hover:text-primary transition-smooth"
+                      className="text-background/80 hover:text-primary transition-smooth text-sm sm:text-base"
                     >
                       {link.name}
                     </Link>
@@ -89,13 +89,13 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="font-display font-semibold text-lg mb-4">Our Services</h4>
-            <ul className="space-y-3">
+            <h4 className="font-display font-semibold text-base sm:text-lg mb-3 sm:mb-4">Our Services</h4>
+            <ul className="space-y-2 sm:space-y-3">
               {services.map((service, index) => (
                 <li key={index}>
                   <Link 
                     to={service.href}
-                    className="text-background/80 hover:text-primary transition-smooth"
+                    className="text-background/80 hover:text-primary transition-smooth text-sm sm:text-base"
                   >
                     {service.name}
                   </Link>
@@ -105,37 +105,37 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div>
-            <h4 className="font-display font-semibold text-lg mb-4">Contact Info</h4>
-            <div className="space-y-4">
+          <div className="col-span-2 lg:col-span-1">
+            <h4 className="font-display font-semibold text-base sm:text-lg mb-3 sm:mb-4">Contact Info</h4>
+            <div className="space-y-3 sm:space-y-4">
               <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <MapPin className="w-4 sm:w-5 h-4 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-background/80">6323 S Rural Rd #101</p>
-                  <p className="text-background/80">Tempe, AZ 85283, USA</p>
+                  <p className="text-background/80 text-sm sm:text-base">6323 S Rural Rd #101</p>
+                  <p className="text-background/80 text-sm sm:text-base">Tempe, AZ 85283, USA</p>
                 </div>
               </div>
               
               <a href="tel:+14808207777" className="flex items-center space-x-3 hover:text-primary transition-smooth">
-                <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <p className="text-background/80">(480) 820-7777</p>
+                <Phone className="w-4 sm:w-5 h-4 sm:h-5 text-primary flex-shrink-0" />
+                <p className="text-background/80 text-sm sm:text-base">(480) 820-7777</p>
               </a>
               
               <a href="mailto:admin@smileinnovation.com" className="flex items-center space-x-3 hover:text-primary transition-smooth">
-                <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <p className="text-background/80">admin@smileinnovation.com</p>
+                <Mail className="w-4 sm:w-5 h-4 sm:h-5 text-primary flex-shrink-0" />
+                <p className="text-background/80 text-sm sm:text-base break-all">admin@smileinnovation.com</p>
               </a>
             </div>
           </div>
         </div>
 
         {/* Bottom Footer */}
-        <div className="border-t border-background/20 pt-8">
+        <div className="border-t border-background/20 pt-6 sm:pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-background/60 text-sm">
+            <p className="text-background/60 text-xs sm:text-sm text-center md:text-left">
               © {new Date().getFullYear()} Smile Innovation. All rights reserved.
             </p>
-            <div className="flex space-x-6 text-sm">
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm">
               <Link to="/privacy-policy" className="text-background/60 hover:text-primary transition-smooth">
                 Privacy Policy
               </Link>

@@ -4,7 +4,7 @@ import droneVideo from "@/assets/drone.mov";
 
 const VideoCallToAction = () => {
   return (
-    <section className="relative h-[600px] md:h-[700px] w-full overflow-hidden">
+    <section className="relative h-[500px] sm:h-[600px] md:h-[700px] w-full overflow-hidden">
       {/* Video Background */}
       <video
         autoPlay
@@ -25,60 +25,60 @@ const VideoCallToAction = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center animate-slide-in-up">
             {/* Main Heading */}
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-4 sm:mb-6 leading-tight">
               Ready to Transform
               <br />
               <span className="text-gradient-animate">Your Smile?</span>
             </h2>
 
             {/* Subheading */}
-            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-4">
               Experience exceptional dental care in Tempe, AZ. Our expert team is ready to help you achieve the healthy, beautiful smile you deserve.
             </p>
 
             {/* Stats or Benefits */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 max-w-3xl mx-auto">
-              <div className="glass-card p-6 rounded-2xl backdrop-blur-md bg-white/10 border border-white/20">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">15+</div>
-                <div className="text-white/80 text-sm md:text-base">Years of Excellence</div>
+            <div className="grid grid-cols-3 gap-3 sm:gap-6 mb-6 sm:mb-10 max-w-3xl mx-auto px-4">
+              <div className="glass-card p-3 sm:p-6 rounded-xl sm:rounded-2xl backdrop-blur-md bg-white/10 border border-white/20">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2">15+</div>
+                <div className="text-white/80 text-xs sm:text-sm md:text-base">Years of Excellence</div>
               </div>
-              <div className="glass-card p-6 rounded-2xl backdrop-blur-md bg-white/10 border border-white/20">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">5000+</div>
-                <div className="text-white/80 text-sm md:text-base">Happy Patients</div>
+              <div className="glass-card p-3 sm:p-6 rounded-xl sm:rounded-2xl backdrop-blur-md bg-white/10 border border-white/20">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2">5000+</div>
+                <div className="text-white/80 text-xs sm:text-sm md:text-base">Happy Patients</div>
               </div>
-              <div className="glass-card p-6 rounded-2xl backdrop-blur-md bg-white/10 border border-white/20">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">98%</div>
-                <div className="text-white/80 text-sm md:text-base">Satisfaction Rate</div>
+              <div className="glass-card p-3 sm:p-6 rounded-xl sm:rounded-2xl backdrop-blur-md bg-white/10 border border-white/20">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2">98%</div>
+                <div className="text-white/80 text-xs sm:text-sm md:text-base">Satisfaction Rate</div>
               </div>
             </div>
 
             {/* Call to Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href="tel:+14808207777">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
+              <a href="tel:+14808207777" className="w-full sm:w-auto">
                 <Button 
                   variant="premium" 
-                  size="xl"
-                  className="group transform transition-all duration-300 hover:scale-110 shadow-2xl"
+                  size="lg"
+                  className="group transform transition-all duration-300 hover:scale-110 shadow-2xl w-full sm:w-auto text-sm sm:text-base"
                 >
-                  <Calendar className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
+                  <Calendar className="w-4 sm:w-5 h-4 sm:h-5 mr-2 group-hover:rotate-12 transition-transform" />
                   Book Your Appointment
                 </Button>
               </a>
               
-              <a href="tel:+14808207777">
+              <a href="tel:+14808207777" className="w-full sm:w-auto">
                 <Button 
                   variant="outline" 
-                  size="xl"
-                  className="bg-white/10 backdrop-blur-md border-white/30 text-white hover:bg-white hover:text-primary transition-all duration-300"
+                  size="lg"
+                  className="bg-white/10 backdrop-blur-md border-white/30 text-white hover:bg-white hover:text-primary transition-all duration-300 w-full sm:w-auto text-sm sm:text-base"
                 >
-                  <Phone className="w-5 h-5 mr-2" />
+                  <Phone className="w-4 sm:w-5 h-4 sm:h-5 mr-2" />
                   Call: (480) 820-7777
                 </Button>
               </a>
             </div>
 
             {/* Additional Info */}
-            <p className="text-white/70 text-sm mt-8">
+            <p className="text-white/70 text-xs sm:text-sm mt-6 sm:mt-8 px-4">
               Same-day appointments available • Free consultations • Flexible financing options
             </p>
           </div>

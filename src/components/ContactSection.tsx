@@ -65,27 +65,27 @@ const ContactSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-4 sm:mb-6">
             <span className="text-foreground">Get in </span>
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               Touch
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
             Ready to transform your smile? Contact us today to schedule your consultation and experience the future of dental care.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           
           {/* Contact Form */}
-          <div className="glass-card p-8 rounded-2xl">
-            <h3 className="text-2xl font-display font-semibold mb-6 text-foreground">
+          <div className="glass-card p-4 sm:p-8 rounded-2xl">
+            <h3 className="text-xl sm:text-2xl font-display font-semibold mb-4 sm:mb-6 text-foreground">
               Send us a message
             </h3>
             
-            <form className="space-y-6" onSubmit={handleSubmit}>
+            <form className="space-y-4 sm:space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
@@ -174,12 +174,12 @@ const ContactSection = () => {
 
           {/* Contact Information */}
           <div className="space-y-8">
-            <div className="glass-card p-8 rounded-2xl">
-              <h3 className="text-2xl font-display font-semibold mb-6 text-foreground">
+            <div className="glass-card p-4 sm:p-8 rounded-2xl">
+              <h3 className="text-xl sm:text-2xl font-display font-semibold mb-4 sm:mb-6 text-foreground">
                 Contact Information
               </h3>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 {contactInfo.map((info, index) => {
                   const IconComponent = info.icon;
                   const content = (
@@ -219,8 +219,8 @@ const ContactSection = () => {
             </div>
 
             {/* Map */}
-            <div className="glass-card p-8 rounded-2xl">
-              <h4 className="font-display font-semibold text-lg mb-4 text-foreground">
+            <div className="glass-card p-4 sm:p-8 rounded-2xl">
+              <h4 className="font-display font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-foreground">
                 Find Us
               </h4>
               <a 
@@ -240,17 +240,17 @@ const ContactSection = () => {
             </div>
 
             {/* Emergency Contact */}
-            <div className="glass-card p-6 rounded-2xl bg-gradient-innovation glow-innovation">
+            <div className="glass-card p-4 sm:p-6 rounded-2xl bg-gradient-innovation glow-innovation">
               <div className="text-center text-white">
-                <Phone className="w-8 h-8 mx-auto mb-3" />
-                <h4 className="font-display font-semibold text-lg mb-2">
+                <Phone className="w-6 sm:w-8 h-6 sm:h-8 mx-auto mb-2 sm:mb-3" />
+                <h4 className="font-display font-semibold text-base sm:text-lg mb-2">
                   Dental Emergency?
                 </h4>
-                <p className="mb-4 opacity-90">
+                <p className="mb-3 sm:mb-4 opacity-90 text-sm sm:text-base">
                   Call us for urgent dental care
                 </p>
                 <a href="tel:+14808207777">
-                  <Button variant="secondary" className="bg-white text-innovation hover:bg-white/90 transition-smooth">
+                  <Button variant="secondary" className="bg-white text-innovation hover:bg-white/90 transition-smooth text-sm sm:text-base">
                     Call (480) 820-7777
                   </Button>
                 </a>

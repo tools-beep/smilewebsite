@@ -41,56 +41,56 @@ const HeroSection = () => {
           {/* Left Column - Main Content */}
           <div className="lg:col-span-7 space-y-8">
             {/* Animated Badge */}
-            <div className={`inline-flex items-center px-6 py-3 rounded-full glass-card hover:shadow-2xl transition-all duration-500 ${isInView ? 'animate-slide-in-left' : ''}`}>
-              <Sparkles className="w-5 h-5 text-primary mr-3 animate-pulse" />
-              <span className="text-base font-medium text-foreground">
+            <div className={`inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 rounded-full glass-card hover:shadow-2xl transition-all duration-500 ${isInView ? 'animate-slide-in-left' : ''}`}>
+              <Sparkles className="w-4 sm:w-5 h-4 sm:h-5 text-primary mr-2 sm:mr-3 animate-pulse" />
+              <span className="text-sm sm:text-base font-medium text-foreground">
                 Experience the Future of Dental Care
               </span>
-              <Zap className="w-4 h-4 text-accent ml-3 animate-bounce" />
+              <Zap className="w-3 sm:w-4 h-3 sm:h-4 text-accent ml-2 sm:ml-3 animate-bounce hidden sm:block" />
             </div>
 
             {/* Animated Main Heading */}
-            <div className={`space-y-4 ${isInView ? 'animate-slide-in-up' : ''}`} style={{ animationDelay: '0.2s' }}>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-tight">
-                <span className="block text-foreground mb-2">Welcome to</span>
-                <span className="block text-gradient-animate text-6xl md:text-8xl lg:text-9xl">
+            <div className={`space-y-2 sm:space-y-4 ${isInView ? 'animate-slide-in-up' : ''}`} style={{ animationDelay: '0.2s' }}>
+              <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-tight">
+                <span className="block text-foreground mb-1 sm:mb-2">Welcome to</span>
+                <span className="block text-gradient-animate text-4xl sm:text-6xl md:text-8xl lg:text-9xl">
                   Smile Innovations
                 </span>
               </h1>
             </div>
 
             {/* Animated Subtitle */}
-            <p className={`text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed ${isInView ? 'animate-slide-in-up' : ''}`} style={{ animationDelay: '0.4s' }}>
+            <p className={`text-base sm:text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed ${isInView ? 'animate-slide-in-up' : ''}`} style={{ animationDelay: '0.4s' }}>
               Where cutting-edge technology meets compassionate care. Experience precision, comfort, and innovation in every treatment.
             </p>
 
             {/* Enhanced CTA Buttons */}
-            <div className={`flex flex-col sm:flex-row gap-6 ${isInView ? 'animate-slide-in-up' : ''}`} style={{ animationDelay: '0.6s' }}>
-              <a href="tel:+14808207777">
+            <div className={`flex flex-col sm:flex-row gap-3 sm:gap-6 ${isInView ? 'animate-slide-in-up' : ''}`} style={{ animationDelay: '0.6s' }}>
+              <a href="tel:+14808207777" className="w-full sm:w-auto">
                 <Button 
                   variant="premium"
-                  size="xl"
-                  className="group transform transition-all duration-300 hover:scale-105"
+                  size="lg"
+                  className="group transform transition-all duration-300 hover:scale-105 w-full sm:w-auto text-sm sm:text-base"
                 >
                   Book Your Appointment
-                  <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 sm:ml-3 w-5 sm:w-6 h-5 sm:h-6 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </a>
-              <a href="#services">
+              <a href="#services" className="w-full sm:w-auto">
                 <Button 
                   variant="glass"
-                  size="xl"
-                  className="group transform transition-all duration-300 hover:scale-105"
+                  size="lg"
+                  className="group transform transition-all duration-300 hover:scale-105 w-full sm:w-auto text-sm sm:text-base"
                 >
                   Explore Our Services
-                  <Sparkles className="ml-3 w-6 h-6 group-hover:rotate-12 transition-transform" />
+                  <Sparkles className="ml-2 sm:ml-3 w-5 sm:w-6 h-5 sm:h-6 group-hover:rotate-12 transition-transform" />
                 </Button>
               </a>
             </div>
           </div>
 
           {/* Right Column - PNG Image */}
-          <div className="lg:col-span-5 space-y-6">
+          <div className="lg:col-span-5 space-y-6 hidden lg:block">
             <div className={`${isInView ? 'animate-slide-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
               <img
                 src="/assets/smilehero.png"
