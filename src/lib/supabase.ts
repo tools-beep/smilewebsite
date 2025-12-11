@@ -31,3 +31,4 @@ export interface AdminUser {
   role: 'admin' | 'super_admin';
   created_at: string;
 }
+
