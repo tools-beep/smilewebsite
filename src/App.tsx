@@ -11,6 +11,12 @@ import Careers from "./pages/Careers";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import { ThemeProvider } from "next-themes";
 import { AnimatePresence, motion } from "motion/react";
+import { AuthProvider } from "./contexts/AuthContext";
+
+// Admin Pages
+import AdminLogin from "./pages/admin/Login";
+import AdminSignup from "./pages/admin/Signup";
+import AdminDashboard from "./pages/admin/Dashboard";
 
 // Service Category Pages
 import CosmeticDentistry from "./pages/services/CosmeticDentistry";
@@ -105,6 +111,11 @@ const AnimatedRoutes = () => {
         <Route path="/services/sleep-dentistry" element={<motion.div {...pageTransition}><SleepDentistry /></motion.div>} />
         <Route path="/services/laser-dentistry" element={<motion.div {...pageTransition}><LaserDentistry /></motion.div>} />
         
+        {/* Admin Routes */}
+        <Route path="/admin/login" element={<motion.div {...pageTransition}><AdminLogin /></motion.div>} />
+        <Route path="/admin/signup" element={<motion.div {...pageTransition}><AdminSignup /></motion.div>} />
+        <Route path="/admin/dashboard" element={<motion.div {...pageTransition}><AdminDashboard /></motion.div>} />
+        
         {/* Catch-all route */}
         <Route path="*" element={<NotFound />} />
       </Routes>
@@ -116,11 +127,13 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <AnimatedRoutes />
-        </BrowserRouter>
+        <AuthProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <AnimatedRoutes />
+          </BrowserRouter>
+        </AuthProvider>
       </TooltipProvider>
     </ThemeProvider>
   </QueryClientProvider>

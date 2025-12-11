@@ -6,23 +6,129 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Briefcase, MapPin, DollarSign, Clock, Check, Upload, Users, TrendingUp, Heart, Award, Coffee, Zap, Mail, Phone } from "lucide-react";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Briefcase, MapPin, DollarSign, Clock, Check, Upload, Users, TrendingUp, Heart, Award, Coffee, Zap, Mail, Phone, Loader2, CheckCircle } from "lucide-react";
 import { useState } from "react";
+import { supabase } from "@/lib/supabase";
 
 const Careers = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    position: '',
+    message: ''
+  });
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState('');
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
-      setSelectedFile(e.target.files[0]);
+      const file = e.target.files[0];
+      // Check file size (5MB limit)
+      if (file.size > 5 * 1024 * 1024) {
+        setError('File size must be less than 5MB');
+        return;
+      }
+      setSelectedFile(file);
+      setError('');
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted");
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({ ...prev, [id]: value }));
   };
+
+  const handlePositionChange = (value: string) => {
+    setFormData(prev => ({ ...prev, position: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError('');
+    setLoading(true);
+
+    try {
+      let resumeUrl = '';
+      let resumeFilename = '';
+
+      // Upload resume if selected
+      if (selectedFile) {
+        const fileExt = selectedFile.name.split('.').pop();
+        const fileName = `${Date.now()}-${formData.fullName.replace(/\s+/g, '-')}.${fileExt}`;
+        
+        const { error: uploadError } = await supabase.storage
+          .from('resumes')
+          .upload(fileName, selectedFile);
+
+        if (uploadError) {
+          throw new Error('Failed to upload resume: ' + uploadError.message);
+        }
+
+        resumeUrl = fileName;
+        resumeFilename = selectedFile.name;
+      }
+
+      // Insert applicant record
+      const { error: insertError } = await supabase
+        .from('applicants')
+        .insert({
+          full_name: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          position: formData.position === 'dentist' ? 'Associate Dentist / Partner Dentist' : 'Full-Time Dental Hygienist',
+          cover_letter: formData.message || null,
+          resume_url: resumeUrl || null,
+          resume_filename: resumeFilename || null,
+          status: 'pending'
+        });
+
+      if (insertError) {
+        throw new Error('Failed to submit application: ' + insertError.message);
+      }
+
+      setSuccess(true);
+      // Reset form
+      setFormData({ fullName: '', email: '', phone: '', position: '', message: '' });
+      setSelectedFile(null);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'An unexpected error occurred');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (success) {
+    return (
+      <div className="min-h-screen bg-background">
+        <SiteHeader />
+        <div className="pt-32 pb-24 flex items-center justify-center">
+          <Card className="w-full max-w-md glass-card border-0 shadow-2xl mx-4">
+            <CardContent className="pt-12 pb-12 text-center">
+              <div className="mx-auto w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mb-6 shadow-lg">
+                <CheckCircle className="w-10 h-10 text-white" />
+              </div>
+              <h2 className="text-2xl font-display font-bold mb-3">Application Submitted!</h2>
+              <p className="text-muted-foreground mb-6">
+                Thank you for applying to Smile Innovation! We've received your application and will review it shortly. Expect to hear from us within 2-3 business days.
+              </p>
+              <Button 
+                variant="premium" 
+                size="lg"
+                onClick={() => setSuccess(false)}
+              >
+                Submit Another Application
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-background">
@@ -427,6 +533,12 @@ const Careers = () => {
 
             <Card className="glass-card border-0 shadow-2xl">
               <CardContent className="p-8 md:p-12">
+                {error && (
+                  <Alert variant="destructive" className="mb-6">
+                    <AlertDescription>{error}</AlertDescription>
+                  </Alert>
+                )}
+                
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name & Email Row */}
                   <div className="grid md:grid-cols-2 gap-6">
@@ -436,6 +548,8 @@ const Careers = () => {
                         id="fullName" 
                         placeholder="John Doe" 
                         required 
+                        value={formData.fullName}
+                        onChange={handleInputChange}
                         className="h-12 border-2 focus:border-primary transition-colors"
                       />
                     </div>
@@ -447,6 +561,8 @@ const Careers = () => {
                         type="email" 
                         placeholder="john@example.com" 
                         required 
+                        value={formData.email}
+                        onChange={handleInputChange}
                         className="h-12 border-2 focus:border-primary transition-colors"
                       />
                     </div>
@@ -461,13 +577,15 @@ const Careers = () => {
                         type="tel" 
                         placeholder="(480) 555-0123" 
                         required 
+                        value={formData.phone}
+                        onChange={handleInputChange}
                         className="h-12 border-2 focus:border-primary transition-colors"
                       />
                     </div>
 
                     <div className="space-y-2">
                       <Label htmlFor="position" className="text-sm font-semibold">Position Applying For *</Label>
-                      <Select required>
+                      <Select value={formData.position} onValueChange={handlePositionChange} required>
                         <SelectTrigger className="h-12 border-2 focus:border-primary transition-colors">
                           <SelectValue placeholder="Select a position" />
                         </SelectTrigger>
@@ -521,6 +639,8 @@ const Careers = () => {
                       id="message" 
                       placeholder="Share your story, experience, and what excites you about joining Smile Innovation..."
                       rows={6}
+                      value={formData.message}
+                      onChange={handleInputChange}
                       className="resize-none border-2 focus:border-primary transition-colors"
                     />
                   </div>
@@ -532,9 +652,19 @@ const Careers = () => {
                       variant="premium" 
                       size="xl"
                       className="w-full group text-lg h-14 shadow-xl hover:shadow-2xl"
+                      disabled={loading}
                     >
-                      Submit Application
-                      <Briefcase className="ml-2 w-5 h-5 group-hover:scale-110 transition-transform" />
+                      {loading ? (
+                        <>
+                          <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                          Submitting...
+                        </>
+                      ) : (
+                        <>
+                          Submit Application
+                          <Briefcase className="ml-2 w-5 h-5 group-hover:scale-110 transition-transform" />
+                        </>
+                      )}
                     </Button>
                     
                     <p className="text-xs text-center text-muted-foreground">
